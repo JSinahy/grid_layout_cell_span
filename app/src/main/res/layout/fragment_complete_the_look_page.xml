@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_main"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <androidx.gridlayout.widget.GridLayout
+        app:rowCount="5"
+        app:columnCount="2"
+        app:alignmentMode="alignBounds"
+        app:useDefaultMargins="true"
+        app:columnOrderPreserved="false"
+        android:textAlignment="center"
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
