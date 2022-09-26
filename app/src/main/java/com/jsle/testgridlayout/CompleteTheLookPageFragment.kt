@@ -68,9 +68,11 @@ class CompleteTheLookPageFragment : Fragment() {
 
     private fun addCustomView(root: ViewGroup) {
         val gridLayout = root.findViewById<androidx.gridlayout.widget.GridLayout>(R.id.gridLayout)
+        gridLayout.columnCount = 2
+        gridLayout.rowCount = 6
 
-        val arr = intArrayOf(10, 11, 12, 13, 14)
-        var products = arrayOf("Sabritas","Pan bimbo","Mandarina","Plata Roatan","Mango Ataulfo")
+        val arr = intArrayOf(10, 11, 12, 13, 14, 15)
+        var products = arrayOf("Sabritas","Pan bimbo","Mandarina","Plata Roatan","Mango Ataulfo", "")
         var r = 0
         for (i in 0..arr.size - 1) {
 
@@ -90,10 +92,10 @@ class CompleteTheLookPageFragment : Fragment() {
                 GridLayout.UNDEFINED, 1,1f)
 
             if (r == 0) {
-                //itemView.layoutParams = LinearLayout.LayoutParams(getScaleDp(164), getScaleDp(300))
-                //image.layoutParams = LinearLayout.LayoutParams(getScaleDp(164), getScaleDp(300))
-                colSpan = GridLayout.spec(GridLayout.UNDEFINED, GridLayout.FILL, 1f);
-                rowSpan = GridLayout.spec(GridLayout.UNDEFINED, 2, 1f);
+                itemView.layoutParams = LinearLayout.LayoutParams(getScaleDp(164), getScaleDp(300))
+                image.layoutParams = LinearLayout.LayoutParams(getScaleDp(164), getScaleDp(300))
+                colSpan = GridLayout.spec(GridLayout.UNDEFINED, 1);
+                rowSpan = GridLayout.spec(GridLayout.UNDEFINED, 2);
             }
             val gridParam: GridLayout.LayoutParams = GridLayout.LayoutParams(
                 rowSpan, colSpan
