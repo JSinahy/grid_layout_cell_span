@@ -21,9 +21,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        var root = findViewById<ViewGroup>(R.id.content_main)
-        addCustomView(root)
     }
 
     private fun addCustomView(root: ViewGroup) {

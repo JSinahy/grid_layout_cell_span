@@ -53,9 +53,9 @@ class MainFragment : Fragment() {
         val currentItemHorizontalMarginPx = 150
         val pageTranslationX = nextItemVisiblePx + currentItemHorizontalMarginPx
         val pageTransformer = ViewPager2.PageTransformer { page: View, position: Float ->
-            if(position != 0f){
-                page.translationX = -pageTranslationX * position
-            }
+
+                //page.translationX = -nextItemVisiblePx * position
+
 
         }
         binding.viewPager.apply {
@@ -93,7 +93,7 @@ class MainFragment : Fragment() {
     class HorizontalMarginItemDecoration(context: Fragment) :
         RecyclerView.ItemDecoration() {
 
-        private val horizontalMarginInPx: Int = 100
+        private val horizontalMarginInPx: Int = context.resources.getDimension(R.dimen.viewpager_current_item_horizontal_margin).toInt()
 
         override fun getItemOffsets(
             outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State
